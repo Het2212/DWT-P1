@@ -35,46 +35,59 @@
 // export default App
 
 // src/App.js
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+// import { useEffect, useState } from 'react';
+// import axios from 'axios';
 
-const App = () => {
-  const [products, setProducts] = useState([]);
+// const App = () => {
+//   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-   
-    axios.get('https://dummyjson.com/products')
-      .then(response => {
-        setProducts(response.data);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }, []); 
+//   useEffect(() => {
 
-  return (
-    <div>
-      <h1>Product Table</h1>
-      <table border="1">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          {products.map(product => (
-            <tr key={product.id}>
-              <td>{product.id}</td>
-              <td>{product.title}</td>
-              <td>{product.price}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-};
+//     axios.get('https://dummyjson.com/products')
+//       .then(response => {
+//         setProducts(response.data);
+//       })
+//       .catch(error => {
+//         console.error('Error:', error);
+//       });
+//   }, []); 
 
-export default App;
+//   return (
+//     <div>
+//       <h1>Product Table</h1>
+//       <table border="1">
+//         <thead>
+//           <tr>
+//             <th>ID</th>
+//             <th>Title</th>
+//             <th>Price</th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {products.map(product => (
+//             <tr key={product.id}>
+//               <td>{product.id}</td>
+//               <td>{product.title}</td>
+//               <td>{product.price}</td>
+//             </tr>
+//           ))}
+//         </tbody>
+//       </table>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+
+import React from 'react';
+import Layout from './modules/layout';
+import '../src/style/common-style.css'
+export default function FixedContainer() {
+    return (
+        <React.Fragment>
+            <Layout />
+        </React.Fragment>
+    );
+}

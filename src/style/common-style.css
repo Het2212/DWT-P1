@@ -1,0 +1,12 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.container {
+  background-color: #0073e6;
+}
+
+.header-body {
+  height: 5%;
+}
